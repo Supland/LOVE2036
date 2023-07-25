@@ -64,7 +64,7 @@ body {
 <body>
 
 <div class="topnav" id="myTopnav">
-  <a href="index.html" >HOME</a>
+  <a href="HOME.html" >HOME</a>
   <a href="ATTACK.html"class="active">ATTACK</a>
   <a href="#contact">Rusted Warfare</a>
   <a href="#about">About</a>
@@ -187,7 +187,6 @@ body {
   font-size: 36px;
   margin-left: 50px;
 }
-
 .openbtn {
   font-size: 20px;
   cursor: pointer;
@@ -196,8 +195,6 @@ body {
   padding: 10px 15px;
   border: none;
 }
-
-
 .openbtn:hover {
   background-color: #444;
 }
@@ -206,12 +203,31 @@ body {
   transition: margin-left .5s;
   padding: 16px;
 }
-
-
 @media screen and (max-height: 450px) {
   .sidebar {padding-top: 15px;}
   .sidebar a {font-size: 18px;}
 }
+
+
+.button {
+  background-color: #ddd;
+  border: none;
+  color: black;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 16px;
+}
+
+.button:hover {
+  background-color: #f1f1f1;
+}
+
+
+
 </style>
 </head>
 <body>
@@ -258,9 +274,12 @@ a:hover{color:#FFFFFF}
 		<!--<img src="image/top.png" width="60" id="img" >-->
 	    <div style="overflow: hidden;">
 	    	<div style="padding-top:20px;padding-right:50px;padding-bottom:50px">
-				<a href="#" style="float: right;text-decoration:none;" class="btns">回到顶部</a><br><br><br>
 				
-				<a href="Game/ATTACK-RC_3.html" style="float: right;text-decoration:none;" class="btns"download="Game/ATTACK-RC_3.html">玩</a>
+				<button class="button">&nbsp;&nbsp;<a href="#" style="float: right;text-decoration:none;" ><a href="#" style="color:black;float: right;text-decoration:none;" > 回到顶部  </a></button><br>
+				
+				<button class="button"><a href="Game/ATTACK-RC_3.html" style="float: right;text-decoration:none;" download="Game/ATTACK-RC_3.html">
+				<a href="Game/ATTACK-RC_3.html" style="color:black;float: right;text-decoration:none;" download="Game/ATTACK-RC_3.html">Download</a></button>
+				
 			</div>
 	    </div>
     </div>
