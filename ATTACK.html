@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <link rel="icon" href="./favicon.ico" type="image/x-icon">  
 <link rel="stylesheet" type="text/css" href="./CSS/Navbar.css">
+<title>Attack</title>
 <html>
 <head>
 	<meta name="Attack-2024" content="width=device-width, initial-scale=1">
@@ -198,13 +199,51 @@ body {
 function a(){
 
 }
+
+
+Notification.requestPermission(function() {
+    if(Notification.permission === 'granted') {
+        // 用户点击了允许
+        let n = new Notification('网易有道词典', {
+            body: '程序已启动',
+            icon: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1549464117983&di=286ad42d05b9ea9720daa1d62cd18ee5&imgtype=0&src=http%3A%2F%2Fimgsrc.baidu.com%2Fimgad%2Fpic%2Fitem%2F8326cffc1e178a8208b90d86fc03738da977e80b.jpg'
+        })
+
+        setTimeout(() => {
+            n.close();
+        }, 3000)
+        
+        n.onclick = function(e) {
+            window.open("https://www.baidu.com")
+            console.log(1, e);
+        }
+
+        n.onerror = function(e) {
+            console.log(2, e);
+        }
+
+        n.onshow = function(e) {
+            console.log(3, e);
+        }
+
+        n.onclose = function(e) {
+            console.log(4, e);
+        }
+        
+    }else if(Notification.permission === 'denied') {
+        // 用户点击了拒绝
+    }else {
+        // 用户没有做决定
+    }
+ 
+
 </script>
 
 
 
 </head>
 
-<body background="./image/Backgrounds.png" style="background-attachment: fixed;background-repeat:no-repeat;background-size:100% 100%;">
+<body background="./image/Backgrounds.png" style="background-attachment: fixed;background-repeat:no-repeat;background-size:100% 100%;onload=a()">
 
 			<div class="topnav"id="myTopnav">
 			  <a href="Game.html">HOME</a>
@@ -258,15 +297,16 @@ function a(){
 
 
 <h1 align="center">基本</h1>
-<h3>游戏使用<a href="https://turbowarp.org/"style="color:blue;">TurboWarp</a>制作。Unity等等游戏引擎制作小游戏过于臃肿，java之类的懒得学，所以就用Turbowarp（低代码）来做了，制作速度快，简单，最后打包成html文件。</h3>
+<h3>游戏使用<a href="https://turbowarp.org/"style="color:blue;" target="_blank">TurboWarp</a>制作。Unity等等游戏引擎制作小游戏过于臃肿，java之类的懒得学，所以就用Turbowarp（低代码）来做了，制作速度快，简单，最后打包成html文件。</h3>
 
 
 <h3>版本历史：</h3>
 
 <ul>
 
-<li><h3>beta版本结束于：文件丢失，时间未知。</h3></li>
-<li><h3>RC版本结束于：文件丢失，时间未知。</h3></li>
+<li><h3>第一个版本版本：2023/5/13</h3></li>
+<li><h3>beta版本结束于：因为文件丢失，时间未知。</h3></li>
+<li><h3>RC版本结束于：因为文件丢失，时间未知。( 可能是2023/8/18 ？）</h3></li>
 <li><h3>正式版（测试）版本开始：大概2023，9月份，结束于：2024/1/23 21:35。</h3></li>
 
 
@@ -283,9 +323,10 @@ function a(){
 <h3>拥有第二种攻击方式的武器：冲击弓，激光炮。</h3>
 <h3>按下对应数字键（1~6）切换武器。游戏默认帧数为60帧。</h3></br>
 
-<h3>游戏难度应该是很高的了，就连我标准模式都没法通关，我相信一些超人还是可以做到的，另外，我很喜欢泰拉瑞亚里的弓，尤其是幻影弓，所以就把它做进游戏里了。</h3></br></br>
+<h3>游戏难度应该是很高的了，就连我困难模式都没法通过，但我相信还是有一些超人可以做到的，另外，我很喜欢泰拉瑞亚里的弓，尤其是幻影弓，所以就把它做进游戏里了。</h3></br></br>
 
-<a href="./Game/ATTACK-1.0.0-2024.html"download="Attack-1.0.0-2024.html"><h2>下载最新版本</h2></a>
+<!-- <a href="./Game/ATTACK-1.0.0-2024.html"download="Attack-1.0.0-2024.html"><h2>下载最新版本</h2></a> -->
+<a href="https://wwf.lanzoum.com/imWM61n3ewkj" target="_blank"><h2>下载最新版本</h2></a>
 
 <div class="opl"></div><div class="opl"></div><div class="opl"></div><div class="opl"></div><div class="opl"></div>
 
@@ -415,7 +456,7 @@ function a(){
 			
 			
 	<div class="Changelogbox_2">
-	<h4 style="float:right;">22:37 2024/1/14</h4>
+	<h4 style="float:right;">2024/1/14_22:37</h4>
 	<h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*beta*</h4>
 	<h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.取消开局冲刺冷却。</h4>
 	</div>
@@ -454,7 +495,17 @@ function a(){
 	<h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;10.修复开始游戏触发受伤特效</h4>
 	</div>
 
-
+	<div class="Changelogbox_2">
+	<h4 style="float:right;">2024/1/13_12:33</h4>
+	<h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*beta24*</h4>
+	<h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.修复boss1护盾消失的bug。</h4>
+	<h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.如果场上存在两个能量爆破那么其中一个爆炸产生的碎片会直接移动到另一个能量爆破，这个bug实在懒得修了。</h4>
+	<h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;将能量爆破的射程改为30L，使得在发射第二个之前爆炸，直接防止出现这个bug。</h4>
+	<h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.优化计算时间：boss移动</h4>
+	<h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4.为配合全局游戏暂停继续功能，改进所有计算时间代码。</h4>
+	<h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5.更新游戏暂停继续功能。</h4>
+	<h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6.鉴于鼠标右键会触发浏览器的鼠标手势，将第二攻击方式恢复为鼠标左键+空格键，冲刺为SHIFT按键。</h4>
+	</div>
 
 
 
